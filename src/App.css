@@ -3,8 +3,9 @@
   justify-content: space-between;
 }
 
-#appbar-buttons button{
+#appbar-buttons button {
   margin-right: 5px;
+
 }
 
 #pageContent{
@@ -15,4 +16,44 @@
 
 #login-page card{
   width: 100%;
+}
+
+#logo-main {
+  display: flex;
+  width: 50%;
+}
+
+#logo-name {
+  margin-left: 5px;
+  margin-top: 4px;
+}
+
+#logo{
+  display: flex;
+  margin-left: 10px;
+  
+}
+
+#logo #first{
+  height: 20px;
+  width: 20px;
+  background-color: red;
+}
+
+#logo #second{
+  height: 20px;
+  width: 20px;
+  background-color: green;
+}
+
+#logo #third{
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
+
+#logo #fourth{
+  height: 20px;
+  width: 20px;
+  background-color: yellow;
 }
