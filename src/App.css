@@ -1,0 +1,18 @@
+#appbar-parent{
+  display: flex;
+  justify-content: space-between;
+}
+
+#appbar-buttons button{
+  margin-right: 5px;
+}
+
+#pageContent{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#login-page card{
+  width: 100%;
+}
