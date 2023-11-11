@@ -3,13 +3,11 @@ import Button from '@mui/material/Button';
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-
-
 function Appbar(){
     const navigate = useNavigate();
     return <div id='appbar-parent'>
        <div id={'logo-main'}>
-        <div id={'logo'}>
+        <div id={'logo'} onClick={()=> {navigate('./')}}>
          <div>
             <div id={'first'}></div>
             <div id={'second'}></div>
@@ -18,8 +16,8 @@ function Appbar(){
             <div id={'third'}></div>
             <div id={'fourth'}></div>
          </div>
-         <Typography id={'logo-name'} variant={"h6"}> Ludo</Typography>
         </div>
+        <Typography id={'logo-name'} variant={"h6"}> Ludo</Typography>
        </div>
        <div id='appbar-buttons'>
         <Button variant={"outlined"} onClick={() => {navigate('/login')}}>Login</Button>

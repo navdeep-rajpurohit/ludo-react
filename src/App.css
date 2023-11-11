@@ -24,15 +24,21 @@
 }
 
 #logo-name {
-  margin-left: 5px;
+  margin-left: 10px;
   margin-top: 4px;
 }
 
 #logo{
   display: flex;
   margin-left: 10px;
-  
+  -webkit-animation:spin 0.5s linear ;
+  -moz-animation:spin 0.5s linear ;
+  animation:spin 0.5s linear ;
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 #logo #first{
   height: 20px;
@@ -56,4 +62,48 @@
   height: 20px;
   width: 20px;
   background-color: yellow;
+}
+
+#play-button{
+  display: flex;
+  justify-content:space-evenly
+
+}
+
+#game{
+  border: solid;
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+#game #red {
+  border: solid;
+  height: 40vh;
+  width: 40vh;
+  background-color: red;
+}
+
+#game #blue {
+  border: solid;
+  height: 40vh;
+  width: 40vh;
+  background-color: blue;
+  margin-top: 50%;
+}
+
+#game #green {
+  border: solid;
+  height: 40vh;
+  width: 40vh;
+  background-color: green;
+}
+
+#game #yellow {
+  border: solid;
+  height: 40vh;
+  width: 40vh;
+  background-color: yellow;
+  margin-top: 50%;
 }
