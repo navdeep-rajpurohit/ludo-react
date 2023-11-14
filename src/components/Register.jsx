@@ -14,7 +14,7 @@ function Register(){
         method: "POST",
         body: JSON.stringify({
             name: name,
-            email: username,
+            username: username,
             password: password
         }),
         headers: {
@@ -25,7 +25,8 @@ function Register(){
         console.log(res);
         res.json()
         .then((data) => {
-            console.log(data);
+            localStorage.setItem('token', data.token);
+            window.location = '/';
         })})
     }
 
@@ -35,8 +36,8 @@ function Register(){
         <Typography variant={"h6"}>Register here</Typography> <br/>
         <TextField fullWidth={true} onChange={(e) => setName(e.target.value)} id="outlined-basic" label="Name" variant="outlined" /> <br/> <br/>
         <TextField fullWidth={true} onChange={(e) => setUsername(e.target.value)} id="outlined-basic" label="Email" variant="outlined" /> <br/> <br/>
-        <TextField fullWidth={true} onChange={(e) => setPassword(e.target.value)} id="outlined-basic" label="Password" variant="outlined" /><br/><br/>
-        <TextField fullWidth={true} id="outlined-basic" label="Re-password" variant="outlined" /><br/><br/>
+        <TextField fullWidth={true} type="Password" onChange={(e) => setPassword(e.target.value)} id="outlined-basic" label="Password" variant="outlined" /><br/><br/>
+        <TextField fullWidth={true} type="Password" id="outlined-basic" label="Re-password" variant="outlined" /><br/><br/>
         <Button variant="contained" onClick={addUser}>Signup</Button>
         </Card>
     </div>

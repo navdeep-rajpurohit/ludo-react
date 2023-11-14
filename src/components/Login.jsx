@@ -11,7 +11,7 @@ function Login(){
     const verifyUser = () => {fetch('http://localhost:3000/login', {
         method: "POST",
         body: JSON.stringify({
-            email: username,
+            username: username,
             password: password
         }),
         headers: {
@@ -19,7 +19,8 @@ function Login(){
         }
     }).then((res) => {
         res.json().then((data) => {
-            console.log(data);
+            localStorage.setItem('token', data.token);
+            window.location = '/';
         })
     })
 }
@@ -29,7 +30,7 @@ function Login(){
         <Card variant="outlined" style={{width: 400, padding: 20}}>
         <Typography variant={"h6"}>Login here</Typography> <br/>
         <TextField fullWidth={true} onChange={(e) => setUsername(e.target.value)} id="outlined-basic" label="Email" variant="outlined" /> <br/> <br/>
-        <TextField fullWidth={true} onChange={(e) => setPassword(e.target.value)} id="outlined-basic" label="Password" variant="outlined" /><br/><br/>
+        <TextField fullWidth={true} onChange={(e) => setPassword(e.target.value)} id="outlined-basic" type="Password" label="Password" variant="outlined" /><br/><br/>
         <Button variant="contained" onClick={verifyUser}>Signin</Button>
         </Card>
     </div>

@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
 }
+#appbar-buttons{
+  display: flex;
+}
 
 #appbar-buttons button {
   margin-right: 5px;
-
+  margin-left: 5px;
 }
 
 #pageContent{
@@ -75,35 +78,48 @@
   width: 100vh;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
 }
 
 #game #red {
-  border: solid;
   height: 40vh;
   width: 40vh;
   background-color: red;
 }
 
 #game #blue {
-  border: solid;
   height: 40vh;
   width: 40vh;
   background-color: blue;
-  margin-top: 50%;
 }
 
 #game #green {
-  border: solid;
   height: 40vh;
   width: 40vh;
   background-color: green;
 }
 
 #game #yellow {
-  border: solid;
   height: 40vh;
   width: 40vh;
   background-color: yellow;
-  margin-top: 50%;
+}
+
+#path-div{
+  display: flex;
+}
+
+#path-div2 div{
+  display: flex;
+}
+
+#pathway-1 {
+  border:  solid;
+  height: 6.25vh;
+  width: 6.25vh;
+}
+
+#middle {
+  border: solid;
+  height: 19.5vh;
+  width: 19.5vh;
 }

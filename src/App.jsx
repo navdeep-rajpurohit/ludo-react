@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Appbar from './components/Appbar'
 import Solo from './components/Solo'
+import Profile from './components/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       <div id='pageContent'>
             <Routes>
                 <Route path="/" element={<Landing />} />
+                <Route path="/profile" element={<Profile/>}/>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/solo" element={<Solo />} />
